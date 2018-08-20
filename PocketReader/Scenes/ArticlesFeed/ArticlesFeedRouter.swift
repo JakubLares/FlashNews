@@ -13,7 +13,7 @@
 import UIKit
 
 @objc protocol ArticlesFeedRoutingLogic {
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToArticleWebView()
 }
 
 protocol ArticlesFeedDataPassing {
@@ -21,37 +21,29 @@ protocol ArticlesFeedDataPassing {
 }
 
 class ArticlesFeedRouter: NSObject, ArticlesFeedRoutingLogic, ArticlesFeedDataPassing {
+
     weak var viewController: ArticlesFeedViewController?
     var dataStore: ArticlesFeedDataStore?
 
     // MARK: Routing
 
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
-    //{
-    //  if let segue = segue {
-    //    let destinationVC = segue.destination as! SomewhereViewController
-    //    var destinationDS = destinationVC.router!.dataStore!
-    //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-    //  } else {
-    //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-    //    var destinationDS = destinationVC.router!.dataStore!
-    //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-    //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-    //  }
-    //}
+    func routeToArticleWebView() {
+        let destinationViewController = ArticleWebViewViewController()
+        guard var destinationDataStore = destinationViewController.router?.dataStore,
+            let dataStore = dataStore else { return }
+        passDataToArticleWebView(source: dataStore, destination: &destinationDataStore)
+        navigateToArticleWebView(source: viewController, destination: destinationViewController)
+    }
 
     // MARK: Navigation
 
-    //func navigateToSomewhere(source: ArticlesFeedViewController, destination: SomewhereViewController)
-    //{
-    //  source.show(destination, sender: nil)
-    //}
+    func navigateToArticleWebView(source: ArticlesFeedViewController?, destination: ArticleWebViewViewController) {
+        source?.navigationController?.pushViewController(destination, animated: true)
+    }
 
     // MARK: Passing data
 
-    //func passDataToSomewhere(source: ArticlesFeedDataStore, destination: inout SomewhereDataStore)
-    //{
-    //  destination.name = source.name
-    //}
+    func passDataToArticleWebView(source: ArticlesFeedDataStore, destination: inout ArticleWebViewDataStore) {
+        destination.article = source.selectedArticle
+    }
 }

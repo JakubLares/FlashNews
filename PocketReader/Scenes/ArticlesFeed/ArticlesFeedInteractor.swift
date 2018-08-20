@@ -18,15 +18,15 @@ protocol ArticlesFeedBusinessLogic {
 }
 
 protocol ArticlesFeedDataStore {
-    //var name: String { get set }
+    var selectedArticle: ArticlesFeed.GetArticles.Article? { get set }
 }
 
 class ArticlesFeedInteractor: ArticlesFeedBusinessLogic, ArticlesFeedDataStore {
     
     var presenter: ArticlesFeedPresentationLogic?
 
+    var selectedArticle: ArticlesFeed.GetArticles.Article?
     private var response: ArticlesFeed.GetArticles.Response?
-    private var selectedArticle: ArticlesFeed.GetArticles.Article?
     private let worker = NetworkWorker()
 
     func getArticles() {

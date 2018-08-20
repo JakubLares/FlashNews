@@ -23,6 +23,12 @@
 		E356A338212A8EE200EA8FB2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E356A33A212A8EE200EA8FB2 /* Localizable.strings */; };
 		E356A33D212A951B00EA8FB2 /* ArticlesFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E356A33C212A951B00EA8FB2 /* ArticlesFeedTableViewCell.swift */; };
 		E356A341212AD8EB00EA8FB2 /* DateFormatter+CzechLong.swift in Sources */ = {isa = PBXBuildFile; fileRef = E356A340212AD8EB00EA8FB2 /* DateFormatter+CzechLong.swift */; };
+		E356A34A212AFFEA00EA8FB2 /* ArticleWebViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E356A344212AFFEA00EA8FB2 /* ArticleWebViewPresenter.swift */; };
+		E356A34C212AFFEA00EA8FB2 /* ArticleWebViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E356A346212AFFEA00EA8FB2 /* ArticleWebViewRouter.swift */; };
+		E356A34D212AFFEA00EA8FB2 /* ArticleWebViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E356A347212AFFEA00EA8FB2 /* ArticleWebViewModels.swift */; };
+		E356A34E212AFFEA00EA8FB2 /* ArticleWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E356A348212AFFEA00EA8FB2 /* ArticleWebViewViewController.swift */; };
+		E356A34F212AFFEA00EA8FB2 /* ArticleWebViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E356A349212AFFEA00EA8FB2 /* ArticleWebViewInteractor.swift */; };
+		E356A351212B03D000EA8FB2 /* UIViewController+ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E356A350212B03D000EA8FB2 /* UIViewController+ShareButton.swift */; };
 		E3A0BB4B2128458F00BD8727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A0BB4A2128458F00BD8727 /* AppDelegate.swift */; };
 		E3A0BB522128459000BD8727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A0BB512128459000BD8727 /* Assets.xcassets */; };
 		E3A0BB552128459000BD8727 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A0BB532128459000BD8727 /* LaunchScreen.storyboard */; };
@@ -48,6 +54,12 @@
 		E356A33B212A8EE400EA8FB2 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E356A33C212A951B00EA8FB2 /* ArticlesFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesFeedTableViewCell.swift; sourceTree = "<group>"; };
 		E356A340212AD8EB00EA8FB2 /* DateFormatter+CzechLong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+CzechLong.swift"; sourceTree = "<group>"; };
+		E356A344212AFFEA00EA8FB2 /* ArticleWebViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleWebViewPresenter.swift; sourceTree = "<group>"; };
+		E356A346212AFFEA00EA8FB2 /* ArticleWebViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleWebViewRouter.swift; sourceTree = "<group>"; };
+		E356A347212AFFEA00EA8FB2 /* ArticleWebViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleWebViewModels.swift; sourceTree = "<group>"; };
+		E356A348212AFFEA00EA8FB2 /* ArticleWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleWebViewViewController.swift; sourceTree = "<group>"; };
+		E356A349212AFFEA00EA8FB2 /* ArticleWebViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleWebViewInteractor.swift; sourceTree = "<group>"; };
+		E356A350212B03D000EA8FB2 /* UIViewController+ShareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ShareButton.swift"; sourceTree = "<group>"; };
 		E3A0BB472128458F00BD8727 /* PocketReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A0BB4A2128458F00BD8727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3A0BB512128459000BD8727 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				E356A30E2128487A00EA8FB2 /* ArticlesFeed */,
+				E356A343212AFFBA00EA8FB2 /* ArticleWebView */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -121,6 +134,7 @@
 				E356A340212AD8EB00EA8FB2 /* DateFormatter+CzechLong.swift */,
 				E356A32F2128818A00EA8FB2 /* JSONDecoder+DateFormatter.swift */,
 				E356A333212A8D2800EA8FB2 /* Calendar+Locale.swift */,
+				E356A350212B03D000EA8FB2 /* UIViewController+ShareButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -131,6 +145,18 @@
 				E356A31C21284A4700EA8FB2 /* NetworkWorker.swift */,
 			);
 			path = Workers;
+			sourceTree = "<group>";
+		};
+		E356A343212AFFBA00EA8FB2 /* ArticleWebView */ = {
+			isa = PBXGroup;
+			children = (
+				E356A344212AFFEA00EA8FB2 /* ArticleWebViewPresenter.swift */,
+				E356A346212AFFEA00EA8FB2 /* ArticleWebViewRouter.swift */,
+				E356A347212AFFEA00EA8FB2 /* ArticleWebViewModels.swift */,
+				E356A348212AFFEA00EA8FB2 /* ArticleWebViewViewController.swift */,
+				E356A349212AFFEA00EA8FB2 /* ArticleWebViewInteractor.swift */,
+			);
+			path = ArticleWebView;
 			sourceTree = "<group>";
 		};
 		E3A0BB3E2128458F00BD8727 = {
@@ -289,13 +315,19 @@
 				E356A32121284A4700EA8FB2 /* ArticlesFeedPresenter.swift in Sources */,
 				E356A32621284A4700EA8FB2 /* ArticlesFeedInteractor.swift in Sources */,
 				E356A32421284A4700EA8FB2 /* ArticlesFeedModels.swift in Sources */,
+				E356A351212B03D000EA8FB2 /* UIViewController+ShareButton.swift in Sources */,
+				E356A34C212AFFEA00EA8FB2 /* ArticleWebViewRouter.swift in Sources */,
 				E356A32E21287B7100EA8FB2 /* DateFormatter+iso8601.swift in Sources */,
 				E356A3302128818A00EA8FB2 /* JSONDecoder+DateFormatter.swift in Sources */,
 				E356A341212AD8EB00EA8FB2 /* DateFormatter+CzechLong.swift in Sources */,
 				E356A32221284A4700EA8FB2 /* NetworkWorker.swift in Sources */,
 				E356A32B2128511E00EA8FB2 /* RoundedCornerImageView.swift in Sources */,
+				E356A34A212AFFEA00EA8FB2 /* ArticleWebViewPresenter.swift in Sources */,
 				E356A32321284A4700EA8FB2 /* ArticlesFeedRouter.swift in Sources */,
+				E356A34E212AFFEA00EA8FB2 /* ArticleWebViewViewController.swift in Sources */,
 				E356A3322128829E00EA8FB2 /* Constants.swift in Sources */,
+				E356A34F212AFFEA00EA8FB2 /* ArticleWebViewInteractor.swift in Sources */,
+				E356A34D212AFFEA00EA8FB2 /* ArticleWebViewModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

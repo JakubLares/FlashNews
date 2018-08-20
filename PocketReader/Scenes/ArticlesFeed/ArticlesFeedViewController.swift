@@ -74,14 +74,15 @@ class ArticlesFeedViewController: UIViewController, ArticlesFeedDisplayLogic {
     }
 
     private func setupNavigationBar() {
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "shareIcon"), style: .done, target: self, action: #selector(shareButtonPressed))
+        addShareButton(action: #selector(shareButtonPressed))
     }
 
     private func setupDetailView() {
         detailView.translatesAutoresizingMaskIntoConstraints = false
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(detailViewPressed))
+        detailView.addGestureRecognizer(gestureRecognizer)
         view.addSubview(detailView)
     }
 
@@ -144,11 +145,13 @@ class ArticlesFeedViewController: UIViewController, ArticlesFeedDisplayLogic {
 
     // MARK: Logic
 
-    @objc func shareButtonPressed() {
+    @objc private func shareButtonPressed() {
 
     }
 
-
+    @objc func detailViewPressed() {
+        router?.routeToArticleWebView()
+    }
 }
 
 extension ArticlesFeedViewController: UITableViewDataSource {
