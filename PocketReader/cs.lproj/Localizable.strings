@@ -1,0 +1,6 @@
+"today" = "dnes";
+"yesterday" = "včera";
+"days.ago" = "před % dny";
+"unknown.error" = "Neznámá chyba";
+"error" = "Chyba";
+"ok" = "OK";
