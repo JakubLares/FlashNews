@@ -20,12 +20,6 @@ enum ArticlesFeed {
             let status, source, sortBy: String?
             let articles: [Article]?
         }
-
-        struct Article: Decodable {
-            let author, title, description, url: String?
-            let urlToImage: String?
-            let publishedAt: Date?
-        }
         
         struct ViewModel {
             let articles: [ArticleViewModel]

@@ -19,29 +19,33 @@ protocol ArticlesFeedBusinessLogic {
 }
 
 protocol ArticlesFeedDataStore {
-    var selectedArticle: ArticlesFeed.GetArticles.Article? { get set }
+    var selectedArticle: Article? { get set }
 }
 
 class ArticlesFeedInteractor: ArticlesFeedBusinessLogic, ArticlesFeedDataStore {
     
     var presenter: ArticlesFeedPresentationLogic?
 
-    var selectedArticle: ArticlesFeed.GetArticles.Article?
-    private var response: ArticlesFeed.GetArticles.Response?
+    var selectedArticle: Article?
+    private var articles: [Article]?
     private let networkWorker = NetworkWorker()
     private let shareWorker = ShareWorker()
+    private let realmWorker = RealmWorker()
 
     func getArticles() {
+        articles = realmWorker.loadArticles()
+        presenter?.presentArticles(articles)
         networkWorker.getArticles(success: { [weak self] response in
-            self?.response = response
-            self?.presenter?.presentArticles(response)
+            self?.articles = response.articles
+            self?.realmWorker.saveArticles(response.articles)
+            self?.presenter?.presentArticles(response.articles)
         }) { [weak self] error in
             self?.presenter?.presentError(error)
         }
     }
 
     func getArticleDetail(_ row: Int) {
-        guard let article = response?.articles?[row] else { return }
+        guard let article = articles?[row] else { return }
         selectedArticle = article
         presenter?.presentArticleDetail(article)
     }

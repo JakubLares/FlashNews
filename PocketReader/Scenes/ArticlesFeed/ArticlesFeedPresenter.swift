@@ -11,10 +11,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 protocol ArticlesFeedPresentationLogic {
-    func presentArticles(_ response: ArticlesFeed.GetArticles.Response)
-    func presentArticleDetail(_ article: ArticlesFeed.GetArticles.Article)
+    func presentArticles(_ articles: [Article]?)
+    func presentArticleDetail(_ article: Article)
     func presentError(_ error: Error?)
 }
 
@@ -24,11 +25,11 @@ class ArticlesFeedPresenter: ArticlesFeedPresentationLogic {
 
     // MARK: Presentation
 
-    func presentArticles(_ response: ArticlesFeed.GetArticles.Response) {
-        viewController?.displayArticles(ArticlesFeed.GetArticles.ViewModel(articles: getArticlesViewModel(response)))
+    func presentArticles(_ articles: [Article]?) {
+        viewController?.displayArticles(ArticlesFeed.GetArticles.ViewModel(articles: getArticlesViewModel(articles)))
     }
 
-    func presentArticleDetail(_ article: ArticlesFeed.GetArticles.Article) {
+    func presentArticleDetail(_ article: Article) {
         viewController?.displayArticleDetail(ArticlesFeed.GetArticleDetail.ViewModel(title: getTitle(article.title),
                                                                                      published: getPublished(article.publishedAt),
                                                                                      imageUrl: getImageUrl(article.urlToImage),
@@ -45,14 +46,14 @@ class ArticlesFeedPresenter: ArticlesFeedPresentationLogic {
 
     // MARK: Getters
 
-    private func getArticlesViewModel(_ response: ArticlesFeed.GetArticles.Response) -> [ArticlesFeed.GetArticles.ArticleViewModel] {
-        var articles = [ArticlesFeed.GetArticles.ArticleViewModel]()
-        response.articles?.forEach {
-            articles.append(ArticlesFeed.GetArticles.ArticleViewModel(title: getTitle($0.title),
+    private func getArticlesViewModel(_ articles: [Article]?) -> [ArticlesFeed.GetArticles.ArticleViewModel] {
+        var articlesViewModel = [ArticlesFeed.GetArticles.ArticleViewModel]()
+        articles?.forEach {
+            articlesViewModel.append(ArticlesFeed.GetArticles.ArticleViewModel(title: getTitle($0.title),
                                                                       published: getPublishedRelative($0.publishedAt),
                                                                       imageUrl: getImageUrl($0.urlToImage)))
         }
-        return articles
+        return articlesViewModel
     }
 
     private func getTitle(_ title: String?) -> String {

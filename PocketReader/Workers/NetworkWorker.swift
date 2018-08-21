@@ -20,6 +20,7 @@ class NetworkWorker {
         URLSession.shared.dataTask(with: url) { data, _, responseError in
             if responseError != nil {
                 failure(responseError)
+                return
             }
 
             guard let data = data else {

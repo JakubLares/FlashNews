@@ -14,7 +14,7 @@ import UIKit
 
 class ShareWorker {
     
-    func shareArticle(_ article: ArticlesFeed.GetArticles.Article?) {
+    func shareArticle(_ article: Article?) {
         guard let article = article else { return }
         let textToShare = [article.title, article.url].compactMap({ $0 }).joined(separator: "\n")
         let activityViewController = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)

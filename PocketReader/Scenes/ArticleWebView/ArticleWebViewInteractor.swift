@@ -18,13 +18,13 @@ protocol ArticleWebViewBusinessLogic {
 }
 
 protocol ArticleWebViewDataStore {
-    var article: ArticlesFeed.GetArticles.Article? { get set }
+    var article: Article? { get set }
 }
 
 class ArticleWebViewInteractor: ArticleWebViewBusinessLogic, ArticleWebViewDataStore {
 
     var presenter: ArticleWebViewPresentationLogic?
-    var article: ArticlesFeed.GetArticles.Article?
+    var article: Article?
     private let shareWorker = ShareWorker()
 
     func getArticleUrl() {
