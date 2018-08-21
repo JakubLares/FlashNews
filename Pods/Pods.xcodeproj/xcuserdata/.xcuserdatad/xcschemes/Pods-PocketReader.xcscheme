@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A267F1C276B7254C3005C34B6B3F731C"
+               BlueprintIdentifier = "B78DA8F63B9D95BCE26FA15D33221C25"
                BlueprintName = "Pods-PocketReader"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "Pods-PocketReader.framework">

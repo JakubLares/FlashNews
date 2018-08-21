@@ -7,5 +7,6 @@ use_frameworks!
 target 'PocketReader' do
 
   pod 'Kingfisher', '~> 4.0'
+  pod 'RealmSwift'
 
 end
