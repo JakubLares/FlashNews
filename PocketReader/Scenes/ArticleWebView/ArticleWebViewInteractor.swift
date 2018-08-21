@@ -14,6 +14,7 @@ import UIKit
 
 protocol ArticleWebViewBusinessLogic {
     func getArticleUrl()
+    func shareArticle()
 }
 
 protocol ArticleWebViewDataStore {
@@ -24,8 +25,13 @@ class ArticleWebViewInteractor: ArticleWebViewBusinessLogic, ArticleWebViewDataS
 
     var presenter: ArticleWebViewPresentationLogic?
     var article: ArticlesFeed.GetArticles.Article?
+    private let shareWorker = ShareWorker()
 
     func getArticleUrl() {
         presenter?.presentArticleUrl(article?.url)
+    }
+
+    func shareArticle() {
+        shareWorker.shareArticle(article)
     }
 }

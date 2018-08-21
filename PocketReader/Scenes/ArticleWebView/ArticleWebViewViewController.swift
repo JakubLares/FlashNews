@@ -99,6 +99,6 @@ class ArticleWebViewViewController: UIViewController, ArticleWebViewDisplayLogic
     // MARK: Logic
 
     @objc private func shareButtonPressed() {
-
+        interactor?.shareArticle()
     }
 }

@@ -146,7 +146,7 @@ class ArticlesFeedViewController: UIViewController, ArticlesFeedDisplayLogic {
     // MARK: Logic
 
     @objc private func shareButtonPressed() {
-
+        interactor?.shareArticle()
     }
 
     @objc func detailViewPressed() {

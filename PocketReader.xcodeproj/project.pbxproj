@@ -29,6 +29,8 @@
 		E356A34E212AFFEA00EA8FB2 /* ArticleWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E356A348212AFFEA00EA8FB2 /* ArticleWebViewViewController.swift */; };
 		E356A34F212AFFEA00EA8FB2 /* ArticleWebViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E356A349212AFFEA00EA8FB2 /* ArticleWebViewInteractor.swift */; };
 		E356A351212B03D000EA8FB2 /* UIViewController+ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E356A350212B03D000EA8FB2 /* UIViewController+ShareButton.swift */; };
+		E356A353212B0DA200EA8FB2 /* ShareWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E356A352212B0DA200EA8FB2 /* ShareWorker.swift */; };
+		E356A355212C25B900EA8FB2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E356A354212C25B900EA8FB2 /* Utils.swift */; };
 		E3A0BB4B2128458F00BD8727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A0BB4A2128458F00BD8727 /* AppDelegate.swift */; };
 		E3A0BB522128459000BD8727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A0BB512128459000BD8727 /* Assets.xcassets */; };
 		E3A0BB552128459000BD8727 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A0BB532128459000BD8727 /* LaunchScreen.storyboard */; };
@@ -60,6 +62,8 @@
 		E356A348212AFFEA00EA8FB2 /* ArticleWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleWebViewViewController.swift; sourceTree = "<group>"; };
 		E356A349212AFFEA00EA8FB2 /* ArticleWebViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleWebViewInteractor.swift; sourceTree = "<group>"; };
 		E356A350212B03D000EA8FB2 /* UIViewController+ShareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ShareButton.swift"; sourceTree = "<group>"; };
+		E356A352212B0DA200EA8FB2 /* ShareWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareWorker.swift; sourceTree = "<group>"; };
+		E356A354212C25B900EA8FB2 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		E3A0BB472128458F00BD8727 /* PocketReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A0BB4A2128458F00BD8727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3A0BB512128459000BD8727 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				E356A31C21284A4700EA8FB2 /* NetworkWorker.swift */,
+				E356A352212B0DA200EA8FB2 /* ShareWorker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				E356A30D2128478F00EA8FB2 /* Scenes */,
 				E3A0BB4A2128458F00BD8727 /* AppDelegate.swift */,
 				E356A3312128829E00EA8FB2 /* Constants.swift */,
+				E356A354212C25B900EA8FB2 /* Utils.swift */,
 				E3A0BB512128459000BD8727 /* Assets.xcassets */,
 				E3A0BB532128459000BD8727 /* LaunchScreen.storyboard */,
 				E3A0BB562128459000BD8727 /* Info.plist */,
@@ -310,6 +316,7 @@
 				E356A334212A8D2800EA8FB2 /* Calendar+Locale.swift in Sources */,
 				E356A32921284E0800EA8FB2 /* ArticlesFeedDetailView.swift in Sources */,
 				E356A33D212A951B00EA8FB2 /* ArticlesFeedTableViewCell.swift in Sources */,
+				E356A353212B0DA200EA8FB2 /* ShareWorker.swift in Sources */,
 				E356A32521284A4700EA8FB2 /* ArticlesFeedViewController.swift in Sources */,
 				E3A0BB4B2128458F00BD8727 /* AppDelegate.swift in Sources */,
 				E356A32121284A4700EA8FB2 /* ArticlesFeedPresenter.swift in Sources */,
@@ -321,6 +328,7 @@
 				E356A3302128818A00EA8FB2 /* JSONDecoder+DateFormatter.swift in Sources */,
 				E356A341212AD8EB00EA8FB2 /* DateFormatter+CzechLong.swift in Sources */,
 				E356A32221284A4700EA8FB2 /* NetworkWorker.swift in Sources */,
+				E356A355212C25B900EA8FB2 /* Utils.swift in Sources */,
 				E356A32B2128511E00EA8FB2 /* RoundedCornerImageView.swift in Sources */,
 				E356A34A212AFFEA00EA8FB2 /* ArticleWebViewPresenter.swift in Sources */,
 				E356A32321284A4700EA8FB2 /* ArticlesFeedRouter.swift in Sources */,

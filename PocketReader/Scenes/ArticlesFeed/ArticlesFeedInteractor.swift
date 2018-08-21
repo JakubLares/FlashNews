@@ -15,6 +15,7 @@ import UIKit
 protocol ArticlesFeedBusinessLogic {
     func getArticles()
     func getArticleDetail(_ row: Int)
+    func shareArticle()
 }
 
 protocol ArticlesFeedDataStore {
@@ -27,10 +28,11 @@ class ArticlesFeedInteractor: ArticlesFeedBusinessLogic, ArticlesFeedDataStore {
 
     var selectedArticle: ArticlesFeed.GetArticles.Article?
     private var response: ArticlesFeed.GetArticles.Response?
-    private let worker = NetworkWorker()
+    private let networkWorker = NetworkWorker()
+    private let shareWorker = ShareWorker()
 
     func getArticles() {
-        worker.getArticles(success: { [weak self] response in
+        networkWorker.getArticles(success: { [weak self] response in
             self?.response = response
             self?.presenter?.presentArticles(response)
         }) { [weak self] error in
@@ -44,4 +46,7 @@ class ArticlesFeedInteractor: ArticlesFeedBusinessLogic, ArticlesFeedDataStore {
         presenter?.presentArticleDetail(article)
     }
 
+    func shareArticle() {
+        shareWorker.shareArticle(selectedArticle)
+    }
 }
