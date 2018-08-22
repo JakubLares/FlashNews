@@ -37,8 +37,8 @@ class ArticlesFeedInteractor: ArticlesFeedBusinessLogic, ArticlesFeedDataStore {
         presenter?.presentArticles(articles)
         networkWorker.getArticles(success: { [weak self] response in
             self?.articles = response.articles
-            self?.realmWorker.saveArticles(response.articles)
-            self?.presenter?.presentArticles(response.articles)
+            self?.realmWorker.saveArticles(self?.articles)
+            self?.presenter?.presentArticles(self?.articles)
         }) { [weak self] error in
             self?.presenter?.presentError(error)
         }

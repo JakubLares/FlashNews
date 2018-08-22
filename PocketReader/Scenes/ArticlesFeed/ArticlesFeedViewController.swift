@@ -19,6 +19,7 @@ protocol ArticlesFeedDisplayLogic: class {
 }
 
 class ArticlesFeedViewController: UIViewController, ArticlesFeedDisplayLogic {
+
     private var interactor: ArticlesFeedBusinessLogic?
     private var router: (NSObjectProtocol & ArticlesFeedRoutingLogic & ArticlesFeedDataPassing)?
 
@@ -62,11 +63,10 @@ class ArticlesFeedViewController: UIViewController, ArticlesFeedDisplayLogic {
         interactor?.getArticles()
     }
 
-    // MARK: Setup UI
+    // MARK: UI
 
     private func setupUI() {
         view.backgroundColor = .white
-        setupNavigationBar()
         setupNavigationBar()
         setupDetailView()
         setupFeedTableView()
@@ -80,20 +80,18 @@ class ArticlesFeedViewController: UIViewController, ArticlesFeedDisplayLogic {
     }
 
     private func setupDetailView() {
-        detailView.translatesAutoresizingMaskIntoConstraints = false
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(detailViewPressed))
         detailView.addGestureRecognizer(gestureRecognizer)
-        view.addSubview(detailView)
+        view.addSubviewForAutoLayout(detailView)
     }
 
     private func setupFeedTableView() {
-        feedTableView.translatesAutoresizingMaskIntoConstraints = false
         feedTableView.delegate = self
         feedTableView.dataSource = self
         feedTableView.register(ArticlesFeedTableViewCell.self, forCellReuseIdentifier: ArticlesFeedTableViewCell.identifier)
         feedTableView.rowHeight = UITableViewAutomaticDimension
         feedTableView.tableFooterView = UIView(frame: .zero)
-        view.addSubview(feedTableView)
+        view.addSubviewForAutoLayout(feedTableView)
     }
 
     // MARK: Constraints

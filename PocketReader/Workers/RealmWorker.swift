@@ -20,15 +20,16 @@ class RealmWorker {
     }
 
     func saveArticles(_ articles: [Article]?) {
+        guard let articles = articles else { return }
         deleteArticles()
-        var articlesToSave = [ArticleRealm]()
-        articles?.forEach {
-            articlesToSave.append(ArticleRealm(value: [$0.author as Any,
-                                                       $0.title as Any,
-                                                       $0.description as Any,
-                                                       $0.url as Any,
-                                                       $0.urlToImage as Any,
-                                                       $0.publishedAt as Any]))
+
+        let articlesToSave = articles.map {
+            ArticleRealm(value: [$0.author as Any,
+                                 $0.title as Any,
+                                 $0.description as Any,
+                                 $0.url as Any,
+                                 $0.urlToImage as Any,
+                                 $0.publishedAt as Any])
         }
 
         let realm = self.realm
@@ -38,17 +39,15 @@ class RealmWorker {
     }
 
     func loadArticles() -> [Article] {
-        var articles = [Article]()
-        let realm = self.realm
-        realm?.objects(ArticleRealm.self).forEach {
-            articles.append(Article(author: $0.author,
-                                    title: $0.title,
-                                    description: $0.description,
-                                    url: $0.url,
-                                    urlToImage: $0.urlToImage,
-                                    publishedAt: $0.publishedAt))
+        guard let realm = self.realm else { return [] }
+        return realm.objects(ArticleRealm.self).map {
+            Article(author: $0.author,
+                    title: $0.title,
+                    description: $0.articleDescription,
+                    url: $0.url,
+                    urlToImage: $0.urlToImage,
+                    publishedAt: $0.publishedAt)
         }
-        return articles
     }
 
     private func deleteArticles() {

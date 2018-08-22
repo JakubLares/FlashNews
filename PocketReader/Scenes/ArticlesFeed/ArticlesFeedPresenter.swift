@@ -44,16 +44,15 @@ class ArticlesFeedPresenter: ArticlesFeedPresentationLogic {
         viewController?.displayAlert(alert)
     }
 
-    // MARK: Getters
+    // MARK: Logic
 
     private func getArticlesViewModel(_ articles: [Article]?) -> [ArticlesFeed.GetArticles.ArticleViewModel] {
-        var articlesViewModel = [ArticlesFeed.GetArticles.ArticleViewModel]()
-        articles?.forEach {
-            articlesViewModel.append(ArticlesFeed.GetArticles.ArticleViewModel(title: getTitle($0.title),
-                                                                      published: getPublishedRelative($0.publishedAt),
-                                                                      imageUrl: getImageUrl($0.urlToImage)))
+        guard let articles = articles else { return [] }
+        return articles.map {
+            ArticlesFeed.GetArticles.ArticleViewModel(title: getTitle($0.title),
+                                                      published: getPublishedRelative($0.publishedAt),
+                                                      imageUrl: getImageUrl($0.urlToImage))
         }
-        return articlesViewModel
     }
 
     private func getTitle(_ title: String?) -> String {

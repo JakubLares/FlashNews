@@ -42,20 +42,14 @@ class ArticlesFeedTableViewCell: UITableViewCell {
     // MARK: UI
 
     private func setupUI() {
-        setupIconImageView()
+        addSubviewForAutoLayout(iconImageView)
         setupTitleLabel()
         setupPublishedLabel()
         setupLabelStackView()
         activateConstrains()
     }
 
-    private func setupIconImageView() {
-        iconImageView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(iconImageView)
-    }
-
     private func setupTitleLabel() {
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         titleLabel.textColor = .darkGray
         titleLabel.numberOfLines = 0
@@ -64,7 +58,6 @@ class ArticlesFeedTableViewCell: UITableViewCell {
     }
 
     private func setupPublishedLabel() {
-        publishedLabel.translatesAutoresizingMaskIntoConstraints = false
         publishedLabel.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         publishedLabel.textColor = .lightGray
         publishedLabel.setContentCompressionResistancePriority(.required, for: .vertical)
@@ -72,9 +65,8 @@ class ArticlesFeedTableViewCell: UITableViewCell {
     }
 
     private func setupLabelStackView() {
-        labelStackView.translatesAutoresizingMaskIntoConstraints = false
         labelStackView.axis = .vertical
-        addSubview(labelStackView)
+        addSubviewForAutoLayout(labelStackView)
     }
 
     private func setupIconImageViewVisibility(_ url: URL?) {
@@ -94,7 +86,7 @@ class ArticlesFeedTableViewCell: UITableViewCell {
             iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
             iconImageView.topAnchor.constraint(greaterThanOrEqualTo: topAnchor, constant: 20),
             iconImageView.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor, constant: -20),
-            iconImageView.heightAnchor.constraint(equalToConstant: 40),
+            iconImageView.heightAnchor.constraint(equalToConstant: 40)
         ]
     }
 
@@ -111,11 +103,11 @@ class ArticlesFeedTableViewCell: UITableViewCell {
     private func activateConstrains() {
         NSLayoutConstraint.activate([
             iconImageViewConstraints,
-            labelStackViewConstraints,
+            labelStackViewConstraints
             ].flatMap({ $0 }))
     }
 
-    // MARK: Logic
+    // MARK: Public methods
 
     func setup(_ model: ArticlesFeed.GetArticles.ArticleViewModel) {
         titleLabel.text = model.title

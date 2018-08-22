@@ -20,10 +20,10 @@ class ArticleWebViewPresenter: ArticleWebViewPresentationLogic {
 
     weak var viewController: ArticleWebViewDisplayLogic?
 
-    func presentArticleUrl(_ url: String?) {
-        guard let urlString = url,
+    func presentArticleUrl(_ urlString: String?) {
+        guard let urlString = urlString,
             let url = URL(string: urlString) else { return }
-         let request = URLRequest(url: url)
+        let request = URLRequest(url: url)
         viewController?.displayArticleUrl(viewModel: ArticleWebView.GetArticleUrl.ViewModel(urlRequest: request))
     }
 }

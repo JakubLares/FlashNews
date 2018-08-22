@@ -33,6 +33,7 @@
 		E356A355212C25B900EA8FB2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E356A354212C25B900EA8FB2 /* Utils.swift */; };
 		E356A358212C317100EA8FB2 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = E356A357212C317100EA8FB2 /* Article.swift */; };
 		E356A35A212C342900EA8FB2 /* RealmWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E356A359212C342900EA8FB2 /* RealmWorker.swift */; };
+		E356A35C212D2FC100EA8FB2 /* UIView+AddSubviewForAutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E356A35B212D2FC100EA8FB2 /* UIView+AddSubviewForAutoLayout.swift */; };
 		E3A0BB4B2128458F00BD8727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A0BB4A2128458F00BD8727 /* AppDelegate.swift */; };
 		E3A0BB522128459000BD8727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A0BB512128459000BD8727 /* Assets.xcassets */; };
 		E3A0BB552128459000BD8727 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A0BB532128459000BD8727 /* LaunchScreen.storyboard */; };
@@ -68,6 +69,7 @@
 		E356A354212C25B900EA8FB2 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		E356A357212C317100EA8FB2 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		E356A359212C342900EA8FB2 /* RealmWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmWorker.swift; sourceTree = "<group>"; };
+		E356A35B212D2FC100EA8FB2 /* UIView+AddSubviewForAutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddSubviewForAutoLayout.swift"; sourceTree = "<group>"; };
 		E3A0BB472128458F00BD8727 /* PocketReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A0BB4A2128458F00BD8727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3A0BB512128459000BD8727 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				E356A32F2128818A00EA8FB2 /* JSONDecoder+DateFormatter.swift */,
 				E356A333212A8D2800EA8FB2 /* Calendar+Locale.swift */,
 				E356A350212B03D000EA8FB2 /* UIViewController+ShareButton.swift */,
+				E356A35B212D2FC100EA8FB2 /* UIView+AddSubviewForAutoLayout.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				E356A32B2128511E00EA8FB2 /* RoundedCornerImageView.swift in Sources */,
 				E356A34A212AFFEA00EA8FB2 /* ArticleWebViewPresenter.swift in Sources */,
 				E356A32321284A4700EA8FB2 /* ArticlesFeedRouter.swift in Sources */,
+				E356A35C212D2FC100EA8FB2 /* UIView+AddSubviewForAutoLayout.swift in Sources */,
 				E356A34E212AFFEA00EA8FB2 /* ArticleWebViewViewController.swift in Sources */,
 				E356A358212C317100EA8FB2 /* Article.swift in Sources */,
 				E356A3322128829E00EA8FB2 /* Constants.swift in Sources */,

@@ -10,6 +10,8 @@ import UIKit
 
 class RoundedCornerImageView: UIImageView {
 
+    // MARK: Init
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -20,10 +22,11 @@ class RoundedCornerImageView: UIImageView {
         setup()
     }
 
+    // MARK: UI
+
     private func setup() {
         layer.cornerRadius = 4
         clipsToBounds = true
         contentMode = .scaleAspectFill
     }
-
 }

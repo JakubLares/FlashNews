@@ -23,7 +23,7 @@ class ArticleWebViewViewController: UIViewController, ArticleWebViewDisplayLogic
 
     private let articleWebView = UIWebView()
     
-    // MARK: Object lifecycle
+    // MARK: Init
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -64,30 +64,19 @@ class ArticleWebViewViewController: UIViewController, ArticleWebViewDisplayLogic
     private func setupUI() {
         view.backgroundColor = .white
         addShareButton(action: #selector(shareButtonPressed))
-        setupWebView()
+        view.addSubviewForAutoLayout(articleWebView)
         activateConstraints()
-    }
-
-    private func setupWebView() {
-        articleWebView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(articleWebView)
     }
 
     // MARK: Constraints
 
-    private var articleWebViewConstraints: [NSLayoutConstraint] {
-        return [
+    private func activateConstraints() {
+        NSLayoutConstraint.activate([
             articleWebView.topAnchor.constraint(equalTo: view.topAnchor),
             articleWebView.rightAnchor.constraint(equalTo: view.rightAnchor),
             articleWebView.leftAnchor.constraint(equalTo: view.leftAnchor),
             articleWebView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ]
-    }
-
-    private func activateConstraints() {
-        NSLayoutConstraint.activate([
-            articleWebViewConstraints
-            ].flatMap({ $0 }))
+            ])
     }
 
     // MARK: Display

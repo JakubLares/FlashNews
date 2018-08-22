@@ -33,7 +33,7 @@ class ArticlesFeedDetailView: UIView {
     // MARK: UI
 
     private func setupUI() {
-        setupDetailImageView()
+        addSubviewForAutoLayout(detailImageView)
         setupSeparatorView()
         setupStackView()
         setupTitleLabel()
@@ -43,25 +43,17 @@ class ArticlesFeedDetailView: UIView {
         activateConstraints()
     }
 
-    private func setupDetailImageView() {
-        detailImageView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(detailImageView)
-    }
-
     private func setupSeparatorView() {
-        separatorView.translatesAutoresizingMaskIntoConstraints = false
         separatorView.backgroundColor = .lightGray
-        addSubview(separatorView)
+        addSubviewForAutoLayout(separatorView)
     }
 
     private func setupStackView() {
-        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        addSubview(stackView)
+        addSubviewForAutoLayout(stackView)
     }
 
     private func setupTitleLabel() {
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         titleLabel.textColor = .darkGray
         titleLabel.numberOfLines = 2
@@ -69,21 +61,18 @@ class ArticlesFeedDetailView: UIView {
     }
 
     private func setupPublished() {
-        publishedLabel.translatesAutoresizingMaskIntoConstraints = false
         publishedLabel.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         publishedLabel.textColor = .lightGray
         stackView.addArrangedSubview(publishedLabel)
     }
 
     private func setupAuthorLabel() {
-        authorLabel.translatesAutoresizingMaskIntoConstraints = false
         authorLabel.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         authorLabel.textColor = .lightGray
         stackView.addArrangedSubview(authorLabel)
     }
 
     private func setupDescriptionLabel() {
-        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         descriptionLabel.textColor = .black
         descriptionLabel.numberOfLines = 0
@@ -127,7 +116,7 @@ class ArticlesFeedDetailView: UIView {
             ].flatMap({ $0 }))
     }
 
-    // MARK: Logic
+    // MARK: Public methods
 
     func setup(_ articleDetail: ArticlesFeed.GetArticleDetail.ViewModel) {
         OperationQueue.main.addOperation { [weak self] in
