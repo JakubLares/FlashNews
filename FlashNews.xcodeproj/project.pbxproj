@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D1012626399EF2D7A5EDFF67 /* Pods_PocketReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F158DDC937B80F0F26917B8 /* Pods_PocketReader.framework */; };
+		144C23C052E1543C2FCCBA2E /* Pods_FlashNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84840B0255E75C77657249E0 /* Pods_FlashNews.framework */; };
 		E356A32121284A4700EA8FB2 /* ArticlesFeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E356A31B21284A4700EA8FB2 /* ArticlesFeedPresenter.swift */; };
 		E356A32221284A4700EA8FB2 /* NetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E356A31C21284A4700EA8FB2 /* NetworkWorker.swift */; };
 		E356A32321284A4700EA8FB2 /* ArticlesFeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E356A31D21284A4700EA8FB2 /* ArticlesFeedRouter.swift */; };
@@ -42,7 +42,10 @@
 /* Begin PBXFileReference section */
 		1F158DDC937B80F0F26917B8 /* Pods_PocketReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		386078AF63A88A2B2AF458B5 /* Pods-PocketReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketReader/Pods-PocketReader.debug.xcconfig"; sourceTree = "<group>"; };
+		4F7F1660227AFFB06377CC41 /* Pods-FlashNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlashNews/Pods-FlashNews.debug.xcconfig"; sourceTree = "<group>"; };
 		512869F3590E1F2DB8585DB0 /* Pods-PocketReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketReader/Pods-PocketReader.release.xcconfig"; sourceTree = "<group>"; };
+		84840B0255E75C77657249E0 /* Pods_FlashNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlashNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E172F24EA2F300FAF4F929DD /* Pods-FlashNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlashNews/Pods-FlashNews.release.xcconfig"; sourceTree = "<group>"; };
 		E356A31B21284A4700EA8FB2 /* ArticlesFeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesFeedPresenter.swift; sourceTree = "<group>"; };
 		E356A31C21284A4700EA8FB2 /* NetworkWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWorker.swift; sourceTree = "<group>"; };
 		E356A31D21284A4700EA8FB2 /* ArticlesFeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesFeedRouter.swift; sourceTree = "<group>"; };
@@ -70,7 +73,7 @@
 		E356A357212C317100EA8FB2 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		E356A359212C342900EA8FB2 /* RealmWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmWorker.swift; sourceTree = "<group>"; };
 		E356A35B212D2FC100EA8FB2 /* UIView+AddSubviewForAutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddSubviewForAutoLayout.swift"; sourceTree = "<group>"; };
-		E3A0BB472128458F00BD8727 /* PocketReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3A0BB472128458F00BD8727 /* FlashNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A0BB4A2128458F00BD8727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3A0BB512128459000BD8727 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3A0BB542128459000BD8727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1012626399EF2D7A5EDFF67 /* Pods_PocketReader.framework in Frameworks */,
+				144C23C052E1543C2FCCBA2E /* Pods_FlashNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +97,8 @@
 			children = (
 				386078AF63A88A2B2AF458B5 /* Pods-PocketReader.debug.xcconfig */,
 				512869F3590E1F2DB8585DB0 /* Pods-PocketReader.release.xcconfig */,
+				4F7F1660227AFFB06377CC41 /* Pods-FlashNews.debug.xcconfig */,
+				E172F24EA2F300FAF4F929DD /* Pods-FlashNews.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				1F158DDC937B80F0F26917B8 /* Pods_PocketReader.framework */,
+				84840B0255E75C77657249E0 /* Pods_FlashNews.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -183,7 +189,7 @@
 		E3A0BB3E2128458F00BD8727 = {
 			isa = PBXGroup;
 			children = (
-				E3A0BB492128458F00BD8727 /* PocketReader */,
+				E3A0BB492128458F00BD8727 /* FlashNews */,
 				E3A0BB482128458F00BD8727 /* Products */,
 				C76685D3FDD2643811BC325C /* Pods */,
 				DD9D15541594B0F6B6837B42 /* Frameworks */,
@@ -193,12 +199,12 @@
 		E3A0BB482128458F00BD8727 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E3A0BB472128458F00BD8727 /* PocketReader.app */,
+				E3A0BB472128458F00BD8727 /* FlashNews.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E3A0BB492128458F00BD8727 /* PocketReader */ = {
+		E3A0BB492128458F00BD8727 /* FlashNews */ = {
 			isa = PBXGroup;
 			children = (
 				E356A356212C316000EA8FB2 /* Models */,
@@ -214,15 +220,15 @@
 				E3A0BB562128459000BD8727 /* Info.plist */,
 				E356A33A212A8EE200EA8FB2 /* Localizable.strings */,
 			);
-			path = PocketReader;
+			path = FlashNews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E3A0BB462128458F00BD8727 /* PocketReader */ = {
+		E3A0BB462128458F00BD8727 /* FlashNews */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E3A0BB592128459000BD8727 /* Build configuration list for PBXNativeTarget "PocketReader" */;
+			buildConfigurationList = E3A0BB592128459000BD8727 /* Build configuration list for PBXNativeTarget "FlashNews" */;
 			buildPhases = (
 				C5F48EDD6A762A335A6A9C8A /* [CP] Check Pods Manifest.lock */,
 				E3A0BB432128458F00BD8727 /* Sources */,
@@ -234,9 +240,9 @@
 			);
 			dependencies = (
 			);
-			name = PocketReader;
+			name = FlashNews;
 			productName = PocketReader;
-			productReference = E3A0BB472128458F00BD8727 /* PocketReader.app */;
+			productReference = E3A0BB472128458F00BD8727 /* FlashNews.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -254,7 +260,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E3A0BB422128458F00BD8727 /* Build configuration list for PBXProject "PocketReader" */;
+			buildConfigurationList = E3A0BB422128458F00BD8727 /* Build configuration list for PBXProject "FlashNews" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -268,7 +274,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E3A0BB462128458F00BD8727 /* PocketReader */,
+				E3A0BB462128458F00BD8727 /* FlashNews */,
 			);
 		};
 /* End PBXProject section */
@@ -298,7 +304,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PocketReader-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FlashNews-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -311,7 +317,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PocketReader/Pods-PocketReader-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-FlashNews/Pods-FlashNews-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -324,7 +330,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PocketReader/Pods-PocketReader-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlashNews/Pods-FlashNews-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -504,17 +510,17 @@
 		};
 		E3A0BB5A2128459000BD8727 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 386078AF63A88A2B2AF458B5 /* Pods-PocketReader.debug.xcconfig */;
+			baseConfigurationReference = 4F7F1660227AFFB06377CC41 /* Pods-FlashNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 95J5JJG634;
-				INFOPLIST_FILE = PocketReader/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FlashNews/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cz.lares.PocketReader;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.lares.flashnews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -523,17 +529,17 @@
 		};
 		E3A0BB5B2128459000BD8727 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 512869F3590E1F2DB8585DB0 /* Pods-PocketReader.release.xcconfig */;
+			baseConfigurationReference = E172F24EA2F300FAF4F929DD /* Pods-FlashNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 95J5JJG634;
-				INFOPLIST_FILE = PocketReader/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FlashNews/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cz.lares.PocketReader;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.lares.flashnews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -543,7 +549,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E3A0BB422128458F00BD8727 /* Build configuration list for PBXProject "PocketReader" */ = {
+		E3A0BB422128458F00BD8727 /* Build configuration list for PBXProject "FlashNews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E3A0BB572128459000BD8727 /* Debug */,
@@ -552,7 +558,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E3A0BB592128459000BD8727 /* Build configuration list for PBXNativeTarget "PocketReader" */ = {
+		E3A0BB592128459000BD8727 /* Build configuration list for PBXNativeTarget "FlashNews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E3A0BB5A2128459000BD8727 /* Debug */,

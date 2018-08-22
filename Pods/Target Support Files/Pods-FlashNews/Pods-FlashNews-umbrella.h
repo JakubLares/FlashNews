@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_PocketReaderVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_PocketReaderVersionString[];
+FOUNDATION_EXPORT double Pods_FlashNewsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_FlashNewsVersionString[];
 

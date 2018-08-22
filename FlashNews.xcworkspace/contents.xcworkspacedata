@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:PocketReader.xcodeproj">
+      location = "group:/Users/jakublares/Development/PocketReader/FlashNews.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:FlashNews.xcodeproj">
    </FileRef>
 </Workspace>
