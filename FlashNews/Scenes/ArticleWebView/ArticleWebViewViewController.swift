@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import WebKit
 
 protocol ArticleWebViewDisplayLogic: class {
     func displayArticleUrl(viewModel: ArticleWebView.GetArticleUrl.ViewModel)
@@ -21,7 +22,7 @@ class ArticleWebViewViewController: UIViewController, ArticleWebViewDisplayLogic
     var interactor: ArticleWebViewBusinessLogic?
     var router: (NSObjectProtocol & ArticleWebViewRoutingLogic & ArticleWebViewDataPassing)?
 
-    private let articleWebView = UIWebView()
+    private let articleWebView = WKWebView()
     
     // MARK: Init
     
@@ -82,7 +83,7 @@ class ArticleWebViewViewController: UIViewController, ArticleWebViewDisplayLogic
     // MARK: Display
 
     func displayArticleUrl(viewModel: ArticleWebView.GetArticleUrl.ViewModel) {
-        articleWebView.loadRequest(viewModel.urlRequest)
+        articleWebView.load(viewModel.urlRequest)
     }
 
     // MARK: Logic
